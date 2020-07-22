@@ -8,6 +8,7 @@ This is a version of a game wew used to play as kids, one against the other, som
 2. [Ongoing round](#ongoing-round)
 3. [Game finnish](#game-finnish)
 4. [Python game](#python-game)
+5. [Future plans](#future-plans)
 
 ### The rules:
 * Usually it goes as best of 5 rounds, but you can do more or less rounds.
@@ -29,7 +30,7 @@ Either way, if you shoot, you waste 1 bullet, so be smart at it.
 * The game finnishes when the first player wins 3 rounds  
 (or more rounds if you choose to extend the game).
 
-# Python game:
+### Python game:
 * Need python >= 3.6 installed.
 * Currently the game is a very simple 1 python file, where you play against the computer, and the computer choose randomly.  
 (except for when both player are out of bullets, then you know that no one will shoot, so he'll choose to load, just like you and everyone else would).
@@ -43,5 +44,8 @@ You can try also the other file:
 ```bash
 python dls_dovi.py
 ```
+
+### Future plans:
+* Hopefully we'll make it as a nice online game in the future, who knows ;-)
 
 ### The end. Enjoy :-)
