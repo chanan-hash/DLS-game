@@ -26,11 +26,13 @@ Either way, if you shoot, you waste 1 bullet, so be smart at it.
 (Or if both sides shoot, but only 1 side have bullets).
 
 ### Game finnish:
-The game finnish when the first player wins 3 rounds (or more rounds if you choose to extend the game).
+* The game finnishes when the first player wins 3 rounds  
+(or more rounds if you choose to extend the game).
 
 # Python game:
 * Need python >= 3.6 installed.
-* Currently the game is a very simple 1 python file, where you play against the computer, and the computer choose randomly (except for when both player are out of bullets, then you know that no one will shoot, so he'll choose to load, just like you and everyone else would).
+* Currently the game is a very simple 1 python file, where you play against the computer, and the computer choose randomly.  
+(except for when both player are out of bullets, then you know that no one will shoot, so he'll choose to load, just like you and everyone else would).
 * The game is running as a "best of 5" method.
 
 To start the game, all you have to do is this:
