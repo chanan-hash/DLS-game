@@ -31,23 +31,30 @@ def gameWon(player):
         keep_playing = False
 
 
-print("Let's start the game!!! Good luck :-) \n")
+print("Let's start the game!!!")
+print("You can always type 'exit' if you wish to stop the game")
+print("Good luck :-) \n")
+
 while keep_playing:
 
     if playerBullets == 0 and botBullets == 0:
         botMove = "load"
     elif botBullets > 0:
-        botMove = random.choice(["defend", "shoot", "load"])
+        botMove = random.choice(["defend", "load", "shoot"])
     else:
         botMove = random.choice(["defend", "load"])
-    playerMove = input("what is your move: defend, load or shoot ?")
-    
-    while playerMove != "shoot" and playerMove != "load" and playerMove != "defend":
-        playerMove = input("Must choose only: defend, load or shoot!")
+
+    playerMove = input("Choose your move - defend, load or shoot: ")
+    while playerMove not in ["shoot", "load", "defend", "exit"]:
+        playerMove = input("Must choose only: defend, load or shoot! ")
     
     #If human with no bullets, but still choosing with shoot or illiegal move...
-    while playerBullets == 0 and playerMove == "shoot" and playerMove != "load" and playerMove != "defend":
-        playerMove = input("You have no bullets. Must choose only: defend or load!")
+    while playerBullets == 0 and playerMove == "shoot" and playerMove not in ["load", "defend", "exit"]:
+        playerMove = input("You have no bullets. Must choose only: defend or load! ")
+    
+    if playerMove == "exit":
+        print("The score was: Human - " + str(playerWins) + ", Bot - " + str(botWins) + "\nGood bye. \n")
+        exit()
     
     print("The computer chose", botMove)
     
@@ -78,7 +85,7 @@ while keep_playing:
     
 if playerWins == 3:
     print("And the winner is the human player!!!")
-    print("Way to go!! You're the man!! (or woman) ;-)")
+    print("Way to go!! You're the man!! (or woman) ;-) \n")
 else:
     print("And the winner is the computer bot!!!")
-    print("Sucks for you, human :P")
+    print("Sucks for you, human :P \n")
