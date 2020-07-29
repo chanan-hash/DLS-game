@@ -1,23 +1,25 @@
 from tkinter import *
+from tkinter import ttk
 
 count = 0
-def counter_label(label):
+def counter_label():
     global count
-    count +=1
-    return count
+
+    label1.configure(text = f'button was clicked {count} times!!!')
+    count += 1
 
 window = Tk()
 
-window.title("GUI")
-
-
-label = Label(window, text = "Hello everyone", fg = "dark green").pack()
+window.title("Button click")
+label = Label(window, text = "Hello everyone")
+label.grid(column = 0, row = 0)
 
 #here I want to show the counter
 
-label1 = Label(window, text= "count = ").pack()
-label2 = Label(window, text = count).pack()
+label1 = Label(window)
+label1.grid(column=0, row=1)
 
-button = Button(window, text = "push",command = counter_label(label2), fg = "blue", width = 10, height = 3, bg = "#fff").pack()
+button = ttk.Button(window, text = "push",command = counter_label)
+button.grid(column = 1, row =0 )
 
 window.mainloop()
