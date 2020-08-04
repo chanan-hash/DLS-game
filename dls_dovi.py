@@ -1,5 +1,5 @@
 #Defend-Load-Shoot game
-#Added comment
+#Added comment 2
 
 import random
 
